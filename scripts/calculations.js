@@ -13,7 +13,7 @@ let expenseEntries = [
 ];
 
 for (let i = 0; i < expenseEntries.length; i++) {
-  totalExpensesValue += expenseEntries[i][1];
+  totalExpensesValue += currentExpense[i][1];
 }
 
 console.log(totalExpensesValue);

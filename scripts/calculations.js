@@ -13,7 +13,7 @@ let expenseEntries = [
 ];
 
 for (let i = 0; i < expenseEntries.length; i++) {
-  totalExpensesValue += currentExpense[i][1];
+  totalExpensesValue += expenseEntries[i][1];
 }
 
 console.log(totalExpensesValue);
@@ -30,6 +30,8 @@ function calculateBalance() {
   let balanceValue = budgetValue - totalExpensesValue;
   return balanceValue;
 }
+
+let balanceColor = "green";
 
 function updateBalanceColor() {
   let balanceValue = calculateBalance();
@@ -50,7 +52,7 @@ function calculateCategoryExpenses(category) {
     let currentExpense = expenseEntries[i];
 
     if (currentExpense[0] === category) {
-      total += expenseEntries[1];
+      total += currentExpense[1];
     }
   }
 
